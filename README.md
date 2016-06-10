@@ -1,5 +1,5 @@
-<h1>react-redux-boilerplate</h1>
-> Containing modern web development tools such as Webpack, React Hot Loader, React Router, Dynamic routing, Redux, Redux simple router, esLint, Babel6, sass, less, postcss, BrowserSync, Tinypng...
+<h1>webpack-boilerplate</h1>
+> Containing modern web development tools such as Webpack, esLint, Babel6, sass, less, postcss, BrowserSync, Tinypng...
 
 Directory Layout:
 ```
