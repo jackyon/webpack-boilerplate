@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# AUTHOR
+
+    Jackyon
+    github: https://github.com/jackyon/
+
+# THANKS
+
+    Webpack and so many useful tools/frameworks.
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, JavaScript, Scss, Webpack, etc...
