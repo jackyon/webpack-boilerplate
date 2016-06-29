@@ -118,12 +118,17 @@ var common = {
 			    test   : /\.woff|\.woff2|\.svg|.eot|\.ttf/,
 			    loader : 'url?prefix=font/&limit=10000'
 			},
-		    //url loader
-		    {
-		    	test: /\.(png|jpg|jpeg|gif)$/,
-		    	loader: 'url?limit=10000',
-				include: APP_PATH
-		    },
+            // image loader
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loader:'file',
+                include: APP_PATH
+            },
+            // html loader
+            {
+                test: /\.html$/,
+                loader: 'html-loader'
+            },
 		    //json loader
 		    {
 		    	test: /\.json$/,
@@ -147,9 +152,8 @@ var common = {
 
 		//html
 		new HtmlWebpackPlugin({
-			title: 'index page',
 			template: path.resolve(ROOT_PATH, 'app/tmpl/index.html'),
-			inject: 'body',
+			inject: 'head',
 			filename: '../index.html',
 			hash: false,
 			chunks: ['vendor'],
