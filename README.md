@@ -1,5 +1,5 @@
 <h1>webpack-boilerplate</h1>
-> Containing modern web development tools such as Webpack, esLint, Babel6, sass, less, postcss, BrowserSync, Tinypng...
+> Containing modern web development tools such as Webpack, esLint, Babel6, sass, less, postcss, BrowserSync, Tinypng, HappyPack, etc...
 
 Directory Layout:
 ```
@@ -31,6 +31,10 @@ $ npm install
 Dev:
 ```
 $ npm run dev
+```
+Dev Quiet(only show important infos):
+```
+$ npm run dev-quiet
 ```
 Browser sync:
 ```

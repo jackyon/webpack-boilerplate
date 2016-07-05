@@ -83,6 +83,9 @@ function getServerIp() {
 
 var ipAddress = getServerIp();
 
+/* makes webpack builds faster by allowing you to transform multiple files in parallel. */
+var HappyPack = require('happypack');
+
 
 
 
@@ -104,7 +107,7 @@ var common = {
 			//jsx
 			{
 				test: /\.jsx?$/,
-      			loader: 'babel',
+      			loaders: [ 'happypack/loader?id=jsx' ],
       			include: APP_PATH
 			},
 			//css
@@ -141,6 +144,8 @@ var common = {
         return [precss, autoprefixer];
     },
     resolve: {
+        root: path.resolve(ROOT_PATH, 'app'),
+        extensions: ['', '.js', '.jsx', '.scss'],
 		alias: {
             app: path.resolve(ROOT_PATH, 'app/containers/App/')
         }
@@ -164,6 +169,13 @@ var common = {
                 removeRedundantAttributes: true
             }
 		}),
+
+        new HappyPack({
+            id: 'jsx',
+            threads: 4,
+            loaders: [ 'babel?cacheDirectory=true' ],
+            cache: true
+        }),
 
     	// ProvidePlugin enable this if you want to expose soem global variable
     ]
@@ -213,7 +225,8 @@ if(TARGET === 'dev') {
 		    	'__DEV__': true,
           		'__PRODUCTION__': false
 		    }),
-    	]
+    	],
+        cache: true
   	});
 }
 
