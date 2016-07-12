@@ -32,7 +32,7 @@ Dev:
 ```
 $ npm run dev
 ```
-Dev Quiet(only show important infos):
+Dev quiet(only show important infos):
 ```
 $ npm run dev-quiet
 ```
@@ -52,6 +52,9 @@ Deploy:
 ```
 $ npm run deploy
 ```
+
+For windows user:
+download git windows for running the commonds: https://git-scm.com/download
 
 Image compress:<br>
 <h5>PNG:</h5>
