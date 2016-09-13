@@ -93,6 +93,11 @@ var HappyPack = require('happypack');
 /* =============================================================
  *  base settings
  * ============================================================ */
+var siteOptions = {
+    logo: './app/public/react-logo.png',
+    appTitle: 'webpack app'
+}
+
 var common = {
 	entry: {
         vendor: ['jquery'],
@@ -299,8 +304,8 @@ var deployCommon = merge(common, {
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new FaviconsWebpackPlugin({
-            logo: './app/public/react-logo.png',
-            title: 'react app'
+            logo: siteOptions.logo,
+            title: siteOptions.appTitle
         }),
         new webpack.optimize.DedupePlugin(),
         new webpack.DefinePlugin({
