@@ -55,7 +55,7 @@
     "webpack-browser-plugin-fork": "^1.0.8",
     "webpack-dev-server": "^1.12.0",
     "webpack-merge": "^0.2.0",
-    "webpack-shell-plugin": "^0.4.2",
+    "webpack-shell-plugin": "^0.4.2"
   },
   "dependencies": {
     "jquery": "^3.0.0",

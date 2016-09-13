@@ -95,7 +95,8 @@ var HappyPack = require('happypack');
  * ============================================================ */
 var common = {
 	entry: {
-        vendor: ['jquery', 'app']
+        vendor: ['jquery'],
+        main: ['app']
     	// app: path.resolve(ROOT_PATH, 'app/components/app/app.js')
     },
     output: {
@@ -161,7 +162,7 @@ var common = {
 			inject: 'head',
 			filename: '../index.html',
 			hash: false,
-			chunks: ['vendor'],
+			chunks: ['vendor','main'],
             minify: {
                 minifyJS: true,
                 collapseWhitespace: true,
@@ -177,7 +178,7 @@ var common = {
             cache: true
         }),
 
-    	// ProvidePlugin enable this if you want to expose soem global variable
+    	ProvidePlugin
     ]
 }
 

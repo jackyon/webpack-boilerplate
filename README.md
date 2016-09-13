@@ -25,6 +25,7 @@ Directory Layout:
 ```
 $ npm install
 ```
+note: make sure you are using node v6.5.0+
 
 <h2>Usage</h2>
 
