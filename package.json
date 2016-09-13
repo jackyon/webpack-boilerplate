@@ -36,6 +36,7 @@
     "extract-text-webpack-plugin": "^0.8.2",
     "favicons-webpack-plugin": "^0.0.6",
     "file-loader": "^0.8.4",
+    "happypack": "^2.1.1",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.17.0",
     "json-loader": "^0.5.4",
@@ -54,10 +55,9 @@
     "webpack-browser-plugin-fork": "^1.0.8",
     "webpack-dev-server": "^1.12.0",
     "webpack-merge": "^0.2.0",
-    "webpack-shell-plugin": "^0.4.2"
+    "webpack-shell-plugin": "^0.4.2",
   },
   "dependencies": {
-    "happypack": "^2.1.1",
     "jquery": "^3.0.0",
     "normalize.css": "^3.0.3"
   }
