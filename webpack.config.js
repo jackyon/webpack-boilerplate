@@ -124,7 +124,7 @@ var common = {
 			},
 			//font
 			{
-			    test   : /\.woff|\.woff2|\.svg|.eot|\.ttf/,
+			    test   : /\.woff|\.woff2|\.svg|.eot|\.ttf|\.otf/,
 			    loader : 'url?prefix=font/&limit=10000'
 			},
             // image loader
@@ -317,7 +317,11 @@ var deployCommon = merge(common, {
 });
 
 if (TARGET === 'deploy') {
-	module.exports = merge(deployCommon, {
+    module.exports = merge(deployCommon);
+}
+
+if (TARGET === 'deployTest') {
+   module.exports = merge(deployCommon, {
         plugins: [
             new WebpackShellPlugin({onBuildExit:['static dist/ -a ' + ipAddress]}),
             new WebpackBrowserPlugin({
