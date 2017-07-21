@@ -107,6 +107,9 @@ var common = {
         filename: '[name].js',
 		chunkFilename: '[id].chunk.js'
     },
+    devServer: {
+        disableHostCheck: true
+    },
     module: {
 		loaders: [
 			//jsx
